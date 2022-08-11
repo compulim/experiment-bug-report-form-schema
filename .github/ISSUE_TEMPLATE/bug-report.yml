@@ -11,16 +11,11 @@ body:
         [GitHub issues](https://github.com/microsoft/botframework-webchat/issues) should be used for bugs and feature requests. See the [Technical Support Guide](https://github.com/microsoft/BotFramework-WebChat/tree/main/docs/TECHNICAL_SUPPORT_GUIDE.md) to get support related to Bot Framework and Web Chat.
   - type: checkboxes
     attributes:
-      label: Accessibility issue
-      options:
-        - label: Yes, this is an accessibility issue.
-  - type: checkboxes
-    attributes:
       label: Adaptive Card issue
       description: |
         If yes, please verify if this issue repro on [Adaptive Cards Designer](https://adaptivecards.io/designer/) or not. If it repro, please [file an issue on their repository](https://github.com/microsoft/AdaptiveCards/issues/new/choose).
       options:
-        - label: Yes, this is an Adaptive Card issue and it is specific to Web Chat.
+        - label: Yes, this is an Adaptive Card issue but it is specific to Web Chat.
   - type: textarea
     id: screenshots
     attributes:
@@ -110,6 +105,11 @@ body:
         - Others/unrelated
     validations:
       required: true
+  - type: checkboxes
+    attributes:
+      label: Accessibility issue
+      options:
+        - label: Yes, this is an accessibility issue.
   - type: textarea
     id: describe-the-bug
     attributes:
