@@ -1,62 +1,137 @@
 name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
-assignees:
-  - octocat
+description: Create a report to help us improve
+labels:
+  - bug
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
+        Please view our [Technical Support Guide](https://github.com/microsoft/BotFramework-WebChat/tree/main/docs/TECHNICAL_SUPPORT_GUIDE.md) before filing a new issue.
+
+        [GitHub issues](https://github.com/microsoft/botframework-webchat/issues) should be used for bugs and feature requests. See the [Technical Support Guide](https://github.com/microsoft/BotFramework-WebChat/tree/main/docs/TECHNICAL_SUPPORT_GUIDE.md) to get support related to Bot Framework and Web Chat.
   - type: textarea
-    id: what-happened
+    id: screenshots
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
-    validations:
-      required: true
-  - type: dropdown
+      label: Screenshots
+      description: |
+        If applicable, add screenshots to help explain your problem.
+        Be sure to remove or obscure personally identifiable information from your code and screenshots
+  - type: input
     id: version
     attributes:
       label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+      description: |
+        To determine what version of Web Chat you are running, open your browser's development tools, and paste the following line of code into the console.
+        
+        `[].map.call(document.head.querySelectorAll('meta[name^="botframework-"]'), function (meta) { return meta.outerHTML; }).join('\n')`
+      placeholder: '4.15.3'
     validations:
       required: true
   - type: dropdown
-    id: browsers
+    id: distribution
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
+      label: Distribution
+      description: |
+        Which distribution are you using Web Chat from?
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+        - Bundle
+        - NPM
+        - IFRAME
+        - Unrelated
+    validations:
+      required: true
+  - type: dropdown
+    id: hosting-environment
+    attributes:
+      label: Hosting environment
+      description: |
+        Which environment do you host Web Chat on?
+      options:
+        - Web apps
+        - Dynamics 365 Omnichannel
+        - SharePoint
+        - PowerApps
+        - Cordova/PhoneGap
+        - WebView on React Native
+        - Others or unrelated
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      description: |
+        Which browser and platform do the issue happened? Please make sure the issue continued to repro on latest version of the browser.
+      options:
+        - "Windows: Edge"
+        - "Windows: Chrome"
+        - "Windows: Firefox"
+        - "Windows: IE Mode"
+        - "macOS: Safari"
+        - "iOS/iPadOS: Safari"
+        - "Android: Chrome"
+        - Others or unrelated
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: |
+        Which area does this issue related to?
+      options:
+        - Adaptive Card
+        - Chat history
+        - Customization
+        - Notification
+        - OAuth
+        - Rich cards (hero card, thumbnail card, etc)
+        - Send box
+        - Speech
+        - Suggested action
+        - Others
+    validations:
+      required: true
   - type: textarea
-    id: logs
+    id: describe-the-bug
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
+      label: Describe the bug
+      description: |
+        Give a clear and concise description of what the bug is.
+        Please be sure to add screenshots of the console errors in your browser, if there are any.
+    validations:
+      required: true
+  - type: textarea
+    id: console-log
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: Console log
+      description: If errors are logged to console (<kbd>F12</kbd>), please copy them here.
+  - type: textarea
+    id: repro-steps
+    attributes:
+      label: Repro steps
+      description: |
+        Please list precise steps to reproduce the issue.
+      value: |
+        1. Navigate to ...
+        1. Click on ...
+        1. Type "..." in the send box
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Give a clear and concise description of what you expect to happen when following the reproduction steps above.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Give a clear and concise description of what actually happened when following the reproduction steps above.
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
