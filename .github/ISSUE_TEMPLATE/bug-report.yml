@@ -128,17 +128,18 @@ body:
     validations:
       required: true
   - type: textarea
-    id: expected
+    id: expected-and-actual
     attributes:
-      label: Expected behavior
-      description: Give a clear and concise description of what you expect to happen when following the reproduction steps above.
+      label: Expected and actual behavior
+      description: Give a clear and concise description of what you expect to happen and what actually happened.
+      value: |
+        Expected:
+        - 
+
+        Actual:
+        - 
     validations:
       required: true
-  - type: textarea
-    id: actual
-    attributes:
-      label: Actual behavior
-      description: Give a clear and concise description of what actually happened when following the reproduction steps above.
   - type: textarea
     id: adaptive-card-json
     attributes:
