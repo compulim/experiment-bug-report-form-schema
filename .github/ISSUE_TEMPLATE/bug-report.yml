@@ -12,7 +12,7 @@ body:
   - type: checkboxes
     attributes:
       label: Is it an issue related to Adaptive Cards?
-      description: If yes, please verify if this issue repro on [Adaptive Cards Designer](https://adaptivecards.io/designer/). If it repro on their designer, please [file an issue on their repository](https://github.com/microsoft/AdaptiveCards/issues/new/choose).
+      description: If yes, please verify if this issue repro on [Adaptive Cards Designer](https://adaptivecards.io/designer/). If it repro on their designer, please [file an issue to their repository](https://github.com/microsoft/AdaptiveCards/issues/new/choose).
       options:
         - label: Yes, this is an Adaptive Card issue but it is specific to Web Chat.
   - type: textarea
@@ -31,7 +31,8 @@ body:
 
         If you are not using latest version of Web Chat, please upgrade to the latest version as the issue may have been resolved.
       options:
-        - Latest
+        - Latest production
+        - Development build
         - I am not using latest
         - Unrelated
     validations:
