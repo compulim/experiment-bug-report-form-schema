@@ -60,7 +60,6 @@ body:
         - Cordova/PhoneGap
         - WebView on React Native
         - Others or unrelated
-      value: Web apps
     validations:
       required: true
   - type: dropdown
