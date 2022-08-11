@@ -27,15 +27,15 @@ body:
       description: |
         To determine what version of Web Chat you are running, open your browser's development tools, and paste the following line of code into the console.
         
-        ```js
-        [].map.call(document.head.querySelectorAll('meta[name^="botframework-"]'), function (meta) { return meta.outerHTML; }).join('\n')
-        ```
+        `[].map.call(document.head.querySelectorAll('meta[name^="botframework-"]'), function (meta) { return meta.outerHTML; }).join('\n')`
 
         If you are not using latest version of Web Chat, please upgrade to the latest version as the issue may have been resolved.
       options:
         - Latest
         - I am not using latest
         - Unrelated
+    validations:
+      required: true
   - type: dropdown
     id: distribution
     attributes:
