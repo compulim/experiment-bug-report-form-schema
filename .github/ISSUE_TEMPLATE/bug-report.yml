@@ -34,17 +34,19 @@ body:
       value: 4.15.3
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: distribution
     attributes:
       label: Distribution
       description: |
         Which distribution are you using Web Chat from?
       options:
-        - label: Bundle (webchat.js)
-        - label: NPM
-        - label: <iframe> (https://webchat.botframework.com/)
-        - label: Unrelated
+        - Bundle (webchat.js)
+        - NPM
+        - IFRAME
+        - Unrelated
+    validations:
+      required: true
   - type: dropdown
     id: hosting-environment
     attributes:
@@ -62,9 +64,9 @@ body:
     validations:
       required: true
   - type: checkboxes
-    id: browser
+    id: browser-and-platform
     attributes:
-      label: Browser
+      label: Browser and platform
       description: |
         Which browsers and platforms do the issue happened? Please make sure the issue continued to repro on latest version of the browser.
       options:
@@ -83,6 +85,8 @@ body:
       label: Area
       description: |
         Which area does this issue related to?
+
+        If this issue is related to Adaptive Card, please verify this issue does not repro on [Adaptive Cards Designer](https://adaptivecards.io/designer/).
       options:
         - Adaptive Card
         - Chat history
@@ -134,6 +138,11 @@ body:
     attributes:
       label: Actual behavior
       description: Give a clear and concise description of what actually happened when following the reproduction steps above.
+  - type: textarea
+    id: adaptive-card-json
+    attributes:
+      label: Adaptive Card JSON
+      description: If this issue related to Adaptive Cards, please paste the JSON of the card below.
   - type: textarea
     id: additional-context
     attributes:
