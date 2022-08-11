@@ -38,24 +38,26 @@ body:
       description: |
         Which distribution are you using Web Chat from?
       options:
-        - label: Bundle - <script src="webchat.js">
-        - label: NPM - npm install botframework-webchat
-        - label: IFRAME - <iframe src="https://webchat.botframework.com/">
+        - label: Bundle (`webchat.js`)
+        - label: NPM (`botframework-webchat`)
+        - label: IFRAME (https://webchat.botframework.com/)
         - label: Unrelated
-  - type: checkboxes
+  - type: dropdown
     id: hosting-environment
     attributes:
       label: Hosting environment
       description: |
-        Which environment do you host Web Chat on?
+        Which hosting environment does this issue affect?
       options:
-        - label: Web apps
-        - label: Dynamics 365 Omnichannel
-        - label: SharePoint
-        - label: PowerApps
-        - label: Cordova/PhoneGap
-        - label: WebView on React Native
-        - label: Others or unrelated
+        - Web apps
+        - Dynamics 365 Omnichannel
+        - SharePoint
+        - PowerApps
+        - Cordova/PhoneGap
+        - WebView on React Native
+        - Others or unrelated
+    validations:
+      required: true
   - type: checkboxes
     id: browser
     attributes:
@@ -63,15 +65,15 @@ body:
       description: |
         Which browsers and platforms do the issue happened? Please make sure the issue continued to repro on latest version of the browser.
       options:
-        - label: Edge
-        - label: Chrome
-        - label: Firefox
-        - label: Safari
-        - label: IE Mode
-        - label: Windows
-        - label: macOS
-        - label: iOS/iPadOS
-        - label: Android
+        - label: "Browser: Edge"
+        - label: "Browser: Chrome"
+        - label: "Browser: Firefox"
+        - label: "Browser: Safari"
+        - label: "Browser: IE Mode"
+        - label: "Platform: Windows"
+        - label: "Platform: macOS"
+        - label: "Platform: iOS/iPadOS"
+        - label: "Platform: Android"
   - type: dropdown
     id: area
     attributes:
