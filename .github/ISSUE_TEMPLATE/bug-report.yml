@@ -20,6 +20,7 @@ body:
       label: Screenshots
       description: |
         If applicable, add screenshots to help explain your problem.
+        
         Be sure to remove or obscure personally identifiable information from your code and screenshots
   - type: input
     id: version
@@ -52,12 +53,13 @@ body:
     attributes:
       label: Hosting environment
       description: |
-        Which hosting environment does this issue affect?
+        Which hosting environment does this issue primarily affect?
       options:
         - Web apps
         - Dynamics 365 Omnichannel
         - SharePoint
         - PowerApps
+        - Electron
         - Cordova/PhoneGap
         - WebView on React Native
         - Others or unrelated
@@ -85,20 +87,22 @@ body:
     attributes:
       label: Area
       description: |
-        Which area does this issue related to?
+        Which area does this issue affect?
 
-        If this issue is related to Adaptive Card, please verify this issue does not repro on [Adaptive Cards Designer](https://adaptivecards.io/designer/).
+        If this issue is related to Adaptive Card, please verify if this issue repro on [Adaptive Cards Designer](https://adaptivecards.io/designer/) or not. If it repro on Adaptive Card Designer, it is likely that this is an Adaptive Card issue.
       options:
-        - Adaptive Card
+        - "Attachment: Adaptive Card"
+        - "Attachment: OAuth card"
+        - "Attachment: Other rich cards"
         - Chat history
-        - Customization
+        - "Customization: Branding"
+        - "Customization: Others"
         - Notification
-        - OAuth
-        - Rich cards (hero card, thumbnail card, etc)
+        - Protocol or service
         - Send box
         - Speech
         - Suggested action
-        - Others
+        - Others/unrelated
     validations:
       required: true
   - type: textarea
@@ -123,8 +127,8 @@ body:
         Please list precise steps to reproduce the issue.
       value: |
         1. Navigate to ...
-        1. Click on ...
-        1. Type "..." in the send box
+        2. Click on ...
+        3. Type "..." in the send box
     validations:
       required: true
   - type: textarea
