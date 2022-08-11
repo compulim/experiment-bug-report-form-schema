@@ -11,38 +11,35 @@ body:
         > [GitHub issues](https://github.com/microsoft/botframework-webchat/issues) should be used for bugs and feature requests. See the [Technical Support Guide](https://github.com/microsoft/BotFramework-WebChat/tree/main/docs/TECHNICAL_SUPPORT_GUIDE.md) to get support related to Bot Framework and Web Chat.
   - type: checkboxes
     attributes:
-      label: Adaptive Card issue
-      description: |
-        If yes, please verify if this issue repro on [Adaptive Cards Designer](https://adaptivecards.io/designer/). If it repro on their designer, please [file an issue on their repository](https://github.com/microsoft/AdaptiveCards/issues/new/choose).
+      label: Is it an issue related to Adaptive Cards?
+      description: If yes, please verify if this issue repro on [Adaptive Cards Designer](https://adaptivecards.io/designer/). If it repro on their designer, please [file an issue on their repository](https://github.com/microsoft/AdaptiveCards/issues/new/choose).
       options:
         - label: Yes, this is an Adaptive Card issue but it is specific to Web Chat.
   - type: textarea
     id: screenshots
     attributes:
-      label: Screenshots
-      description: |
-        If applicable, add screenshots to help explain your problem.
-
-        Be sure to remove or obscure personally identifiable information from your code and screenshots
-  - type: input
+      label: Do you have any screenshots?
+      description: Be sure to remove or obscure personally identifiable information from your code and screenshots
+  - type: dropdown
     id: version
     attributes:
-      label: Version
+      label: What version of Web Chat are you using?
       description: |
         To determine what version of Web Chat you are running, open your browser's development tools, and paste the following line of code into the console.
         
         ```js
         [].map.call(document.head.querySelectorAll('meta[name^="botframework-"]'), function (meta) { return meta.outerHTML; }).join('\n')
         ```
-      value: 4.15.3
-    validations:
-      required: true
+
+        If you are not using latest version of Web Chat, please upgrade to the latest version as the issue may have been resolved.
+      options:
+        - Latest
+        - I am not using latest
+        - Unrelated
   - type: dropdown
     id: distribution
     attributes:
-      label: Distribution
-      description: |
-        Which distribution are you using Web Chat from?
+      label: Which distribution are you using Web Chat from?
       options:
         - Bundle (webchat.js)
         - NPM
@@ -53,9 +50,7 @@ body:
   - type: dropdown
     id: hosting-environment
     attributes:
-      label: Hosting environment
-      description: |
-        Which hosting environment does this issue primarily affect?
+      label: Which hosting environment does this issue primarily affect?
       options:
         - Web apps
         - Dynamics 365 Omnichannel
@@ -70,9 +65,8 @@ body:
   - type: dropdown
     id: browser-and-platform
     attributes:
-      label: Browser and platform
-      description: |
-        Which browsers and platforms do the issue happened? Please make sure the issue continued to repro on latest version of the browser.
+      label: Which browsers and platforms do the issue happened?
+      description: Please make sure the issue continued to repro on latest version of the browser.
       multiple: true
       options:
         - "Browser: Edge"
@@ -87,9 +81,7 @@ body:
   - type: dropdown
     id: area
     attributes:
-      label: Area
-      description: |
-        Which area does this issue affect?
+      label: Which area does this issue affect?
       options:
         - "Attachment: Adaptive Card"
         - "Attachment: OAuth card"
@@ -107,13 +99,13 @@ body:
       required: true
   - type: checkboxes
     attributes:
-      label: Accessibility issue
+      label: Is this an accessibility issue?
       options:
         - label: Yes, this is an accessibility issue.
   - type: textarea
     id: describe-the-bug
     attributes:
-      label: Describe the bug
+      label: Can you describe the bug?
       description: |
         Give a clear and concise description of what the bug is.
         Please be sure to add screenshots of the console errors in your browser, if there are any.
@@ -122,14 +114,12 @@ body:
   - type: textarea
     id: console-log
     attributes:
-      label: Console log
+      label: Do you see any errors in console log?
       description: If errors are logged to console (<kbd>F12</kbd>), please copy them here.
   - type: textarea
     id: repro-steps
     attributes:
-      label: Repro steps
-      description: |
-        Please list precise steps to reproduce the issue.
+      label: How to reproduce the issue?
       value: |
         1. Navigate to ...
         2. Click on ...
@@ -139,7 +129,7 @@ body:
   - type: textarea
     id: expected-and-actual
     attributes:
-      label: Expected and actual behavior
+      label: What is the expected and actual behavior?
       description: Give a clear and concise description of what you expect to happen and what actually happened.
       value: |
         Expected:
