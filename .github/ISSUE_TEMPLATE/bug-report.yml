@@ -20,7 +20,7 @@ body:
       label: Screenshots
       description: |
         If applicable, add screenshots to help explain your problem.
-        
+
         Be sure to remove or obscure personally identifiable information from your code and screenshots
   - type: input
     id: version
@@ -88,8 +88,6 @@ body:
       label: Area
       description: |
         Which area does this issue affect?
-
-        If this issue is related to Adaptive Card, please verify if this issue repro on [Adaptive Cards Designer](https://adaptivecards.io/designer/) or not. If it repro on Adaptive Card Designer, it is likely that this is an Adaptive Card issue.
       options:
         - "Attachment: Adaptive Card"
         - "Attachment: OAuth card"
@@ -105,6 +103,11 @@ body:
         - Others/unrelated
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: |
+        If this issue is related to Adaptive Card. Please verify if this issue repro on [Adaptive Cards Designer](https://adaptivecards.io/designer/) or not.
+        If it repro on Adaptive Card Designer, it is likely that this is an Adaptive Card issue. Please [file an issue on their repository](https://github.com/microsoft/AdaptiveCards/issues/new/choose).
   - type: textarea
     id: describe-the-bug
     attributes:
