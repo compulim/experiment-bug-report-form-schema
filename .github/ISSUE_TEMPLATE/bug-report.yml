@@ -9,13 +9,11 @@ body:
         Please view our [Technical Support Guide](https://github.com/microsoft/BotFramework-WebChat/tree/main/docs/TECHNICAL_SUPPORT_GUIDE.md) before filing a new issue.
 
         [GitHub issues](https://github.com/microsoft/botframework-webchat/issues) should be used for bugs and feature requests. See the [Technical Support Guide](https://github.com/microsoft/BotFramework-WebChat/tree/main/docs/TECHNICAL_SUPPORT_GUIDE.md) to get support related to Bot Framework and Web Chat.
-  - type: checkbox
+  - type: checkboxes
     attributes:
       label: Accessibility issue
-      description: Is the issue related to accessibility?
-      value: false
-    validations:
-      required: true
+      options:
+        - label: Yes, this is an accessibility issue.
   - type: textarea
     id: screenshots
     attributes:
@@ -33,52 +31,47 @@ body:
         `[].map.call(document.head.querySelectorAll('meta[name^="botframework-"]'), function (meta) { return meta.outerHTML; }).join('\n')`
     validations:
       required: true
-  - type: dropdown
+  - type: checkboxes
     id: distribution
     attributes:
       label: Distribution
       description: |
         Which distribution are you using Web Chat from?
       options:
-        - Bundle
-        - NPM
-        - IFRAME
-        - Unrelated
-    validations:
-      required: true
-  - type: dropdown
+        - label: Bundle - <script src="webchat.js">
+        - label: NPM - npm install botframework-webchat
+        - label: IFRAME - <iframe src="https://webchat.botframework.com/">
+        - label: Unrelated
+  - type: checkboxes
     id: hosting-environment
     attributes:
       label: Hosting environment
       description: |
         Which environment do you host Web Chat on?
       options:
-        - Web apps
-        - Dynamics 365 Omnichannel
-        - SharePoint
-        - PowerApps
-        - Cordova/PhoneGap
-        - WebView on React Native
-        - Others or unrelated
-    validations:
-      required: true
-  - type: dropdown
+        - label: Web apps
+        - label: Dynamics 365 Omnichannel
+        - label: SharePoint
+        - label: PowerApps
+        - label: Cordova/PhoneGap
+        - label: WebView on React Native
+        - label: Others or unrelated
+  - type: checkboxes
     id: browser
     attributes:
       label: Browser
       description: |
-        Which browser and platform do the issue happened? Please make sure the issue continued to repro on latest version of the browser.
+        Which browsers and platforms do the issue happened? Please make sure the issue continued to repro on latest version of the browser.
       options:
-        - "Windows: Edge"
-        - "Windows: Chrome"
-        - "Windows: Firefox"
-        - "Windows: IE Mode"
-        - "macOS: Safari"
-        - "iOS/iPadOS: Safari"
-        - "Android: Chrome"
-        - Others or unrelated
-    validations:
-      required: true
+        - label: Edge
+        - label: Chrome
+        - label: Firefox
+        - label: Safari
+        - label: IE Mode
+        - label: Windows
+        - label: macOS
+        - label: iOS/iPadOS
+        - label: Android
   - type: dropdown
     id: area
     attributes:
