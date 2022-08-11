@@ -52,6 +52,7 @@ body:
     id: hosting-environment
     attributes:
       label: Which hosting environment does this issue primarily affect?
+      description: If you choose "Others", please provide us information on your hosting environment in the Additional Context section.
       options:
         - Web apps
         - Dynamics 365 Omnichannel
@@ -70,11 +71,11 @@ body:
       description: Please make sure the issue continued to repro on latest version of the browser.
       multiple: true
       options:
-        - "Browser: Edge"
-        - "Browser: Chrome"
-        - "Browser: Firefox"
-        - "Browser: Safari"
-        - "Browser: IE Mode"
+        - "Browser: Edge (latest)"
+        - "Browser: Chrome (latest)"
+        - "Browser: Firefox (latest)"
+        - "Browser: Safari (latest)"
+        - "Browser: IE Mode (latest)"
         - "Platform: Windows"
         - "Platform: macOS"
         - "Platform: iOS/iPadOS"
@@ -106,17 +107,15 @@ body:
   - type: textarea
     id: describe-the-bug
     attributes:
-      label: Can you describe the bug?
-      description: |
-        Give a clear and concise description of what the bug is.
-        Please be sure to add screenshots of the console errors in your browser, if there are any.
+      label: Please describe the bug
+      description: Give a clear and concise description of what the bug is.
     validations:
       required: true
   - type: textarea
     id: console-log
     attributes:
       label: Do you see any errors in console log?
-      description: If errors are logged to console (<kbd>F12</kbd>), please copy them here.
+      description: If errors are logged to the console, please copy them here.
   - type: textarea
     id: repro-steps
     attributes:
@@ -142,7 +141,7 @@ body:
     id: adaptive-card-json
     attributes:
       label: Adaptive Card JSON
-      description: If this issue related to Adaptive Cards, please paste the JSON of the card below.
+      description: If this issue is related to Adaptive Cards, please paste the JSON of the card below.
       placeholder: |
         ```json
         {
