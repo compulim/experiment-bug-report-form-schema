@@ -134,10 +134,8 @@ body:
       description: Give a clear and concise description of what you expect to happen and what actually happened.
       value: |
         Expected:
-        - 
 
         Actual:
-        - 
     validations:
       required: true
   - type: textarea
@@ -145,6 +143,15 @@ body:
     attributes:
       label: Adaptive Card JSON
       description: If this issue related to Adaptive Cards, please paste the JSON of the card below.
+      placeholder: |
+        ```json
+        {
+          "type": "AdaptiveCard",
+          "body": []
+          "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+          "version": "1.5"
+        }
+        ```
   - type: textarea
     id: additional-context
     attributes:
