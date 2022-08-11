@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         > Please view our [Technical Support Guide](https://github.com/microsoft/BotFramework-WebChat/tree/main/docs/TECHNICAL_SUPPORT_GUIDE.md) before filing a new issue.
-
+        >
         > [GitHub issues](https://github.com/microsoft/botframework-webchat/issues) should be used for bugs and feature requests. See the [Technical Support Guide](https://github.com/microsoft/BotFramework-WebChat/tree/main/docs/TECHNICAL_SUPPORT_GUIDE.md) to get support related to Bot Framework and Web Chat.
   - type: checkboxes
     attributes:
