@@ -63,22 +63,23 @@ body:
         - Others or unrelated
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: browser-and-platform
     attributes:
       label: Browser and platform
       description: |
         Which browsers and platforms do the issue happened? Please make sure the issue continued to repro on latest version of the browser.
+      multiple: true
       options:
-        - label: "Browser: Edge"
-        - label: "Browser: Chrome"
-        - label: "Browser: Firefox"
-        - label: "Browser: Safari"
-        - label: "Browser: IE Mode"
-        - label: "Platform: Windows"
-        - label: "Platform: macOS"
-        - label: "Platform: iOS/iPadOS"
-        - label: "Platform: Android"
+        - "Browser: Edge"
+        - "Browser: Chrome"
+        - "Browser: Firefox"
+        - "Browser: Safari"
+        - "Browser: IE Mode"
+        - "Platform: Windows"
+        - "Platform: macOS"
+        - "Platform: iOS/iPadOS"
+        - "Platform: Android"
   - type: dropdown
     id: area
     attributes:
