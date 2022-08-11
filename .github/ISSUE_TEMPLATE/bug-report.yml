@@ -41,9 +41,9 @@ body:
       description: |
         Which distribution are you using Web Chat from?
       options:
-        - label: Bundle (`webchat.js`)
-        - label: NPM (`botframework-webchat`)
-        - label: IFRAME (https://webchat.botframework.com/)
+        - label: Bundle (webchat.js)
+        - label: NPM
+        - label: <iframe> (https://webchat.botframework.com/)
         - label: Unrelated
   - type: dropdown
     id: hosting-environment
