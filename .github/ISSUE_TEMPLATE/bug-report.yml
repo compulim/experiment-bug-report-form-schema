@@ -40,9 +40,9 @@ body:
       description: |
         Which distribution are you using Web Chat from?
       options:
-        - Bundle - &lt;script src=&quot;webchat.js&quot;&gt;
+        - Bundle - webchat.js
         - NPM - npm install botframework-webchat
-        - IFRAME - &lt;iframe src=&quot;https://webchat.botframework.com/&quot;&gt;
+        - IFRAME - https://webchat.botframework.com/
         - Unrelated
     validations:
       required: true
